@@ -59,7 +59,7 @@ ml_visualize_dayOfMeanFlow_through_time2.py | dayOfMeanFlowThroughTime.csv |  | 
 ml_encodings_slopes_temp.py | ml_slope_encodings1.csv |  | S10 | 
 ml_masd_map.py | specific_discharge_vs_size.csv |  | S10 | Panel A
 ml_visualize_dayOfMeanFlow_mean_map.py | dayOfMeanFlowthroughTime.csv | | S10 | Panel B
-|  |  |  | S10 | Panel D
+slopeThroughTIme.py | specific_discharge_vs_size.csv |  | S10 | Panel D
 ml_encodings_means.py | alldata.csv |  | S11 | 
 ml_visualize_dayOfMeanFlow_mean_map.py | alldata.csv |  | S11 | 
 ml_visualize_dayOfMeanFlow_mean_map.py | dayOfMeanFlowThroughTime.csv |  | S11 | Panel B
