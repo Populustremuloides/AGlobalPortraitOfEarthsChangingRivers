@@ -12,8 +12,7 @@ The following table represents the dependency graph between each figure in the m
 | --------- | ---------- | ----------- | ------------------------ | ----- |
 | a | b | c | d | e |
 
-
-| file_or_folder | uses | produces | figure | Notes | 
+| code file | input file | output file | figure produced (if any) | Notes |
 | -------------  | ---- | -------- | ------ | ----- |
 | dayOfMeanFlowThroughTime.py | alldata.csv | dayOfMeanFlowThroughTime.csv |  |  |
 | example_spectral_properties_hydrographs.py | alldata.csv |  | S3 | All frames |
