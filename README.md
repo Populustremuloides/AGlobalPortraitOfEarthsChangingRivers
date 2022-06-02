@@ -31,9 +31,7 @@ R libraries used include the following:
 
 ## Code Organization
 
-The following table represents the dependency graph between each figure in the manuscript and the code and data files used to generate it, as well as the parent code and data files all the way back to the original data files.
-
-The following table gives the dependency graph structure between each figure in the manuscript and the code and files used to genearte that figure, through intermediary files, all the way back to the raw data files.
+The following table represents the dependency graph structure between each figure in the manuscript and the code and data files used to generate it, as well as the parent code and data files all the way back to the original data files.
 
 code file | input file | output file | figure produced (if any) | Notes
 -------------- | ---- | -------- | ------ | -----
