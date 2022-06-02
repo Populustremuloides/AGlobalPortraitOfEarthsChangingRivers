@@ -8,14 +8,8 @@ The Python code was executed using version 3.7. To run the code, you will need t
 
 The following table represents the dependency graph between each figure in the manuscript and the code and data files used to generate it, as well as the parent code and data files all the way back to the original data files. The intermediary processing files will be made available following publication, but the raw files used in this analysis are currently published on Research Gate [here](https://www.researchgate.net/publication/354085237_Daily_Streamflow_Data_hemisphere_corrected#fullTextFileContent) and [here](https://www.researchgate.net/publication/354080229_Streamflow_Metrics_and_Catchment_Characteristics_for_Global_Streamflow_Dataset). The methods used for generating these data can be found in [this preprint](https://www.researchgate.net/publication/354197150_The_Music_of_Rivers_How_the_Mathematics_of_Waves_Reveals_Global_Drivers_of_Streamflow_Regime).
 
-| code file | input file | output file | figure produced (if any) | Notes |
-| --------- | ---------- | ----------- | ------------------------ | ----- |
-| a | b | c | d | e |
 
-
-
-
-file_or_folder | uses | produces | figure | Notes
+code file | input file | output file | figure produced (if any) | Notes
 -------------- | ---- | -------- | ------ | -----
 threeDPlot.py | day_of_mean_flow_vs_size.csv |  | 1 | All panels
 threeDPlot.py | ml_slope_encodings1.csv |  | 1 | 
