@@ -65,7 +65,7 @@ plt.show()
 print(df)
 
 # PLOT ON A WORLD MAP
-
+# we don't go as negative as we could for the lower bound to keep contrast (the Amazon catchments really go negative)
 norm = mpl.colors.Normalize(vmin=(-1 * np.max(df["spectral_mean"])), vmax=(1 * np.max(df["spectral_mean"])))
 cmap = cm.seismic
 m = cm.ScalarMappable(norm=norm, cmap=cmap)
@@ -122,7 +122,7 @@ noise = np.random.normal(size = len(gords)) * 0.17
 gords = np.add(gords, noise)
 ncolors = []
 for index, row in ndf.iterrows():
-    ncolors.append(m.to_rgba(-1 * row["spectral_mean"]))
+    ncolors.append(m.to_rgba(row["spectral_mean"]))
 plt.scatter(precips, temps, color=ncolors, alpha=1, s=2)
 plt.xlabel("mean annual precipitation")
 plt.ylabel("mean annual temperature")
