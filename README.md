@@ -36,6 +36,8 @@ The following table represents the dependency graph structure between each figur
 code file | input file | output file | figure produced (if any) | Notes
 -------------- | ---- | -------- | ------ | -----
 getExampleStream.py | FullDatabase.csv |  | 1 | all panels
+getExampleStream.py | localWaterYear |  |  |
+getExampleStream.py | localWaterYearSpectralDecomposition |  |  |
 threeDPlot.py | day_of_mean_flow_vs_size.csv |  | 2 | All frames
 threeDPlot.py | ml_slope_encodings1.csv |  | 2 |
 threeDPlot.py | specific_discharge_vs_size.csv |  | 2 |
@@ -52,7 +54,10 @@ ml_encodings_slopes.py  | ml_slope_encodings1.csv |  | 4 | Panel E
 ml_masd_map.py | specific_discharge_vs_size.csv |  | 4 | Panel B
 ml_visualizele_masd_through_time2.py | specific_discharge_vs_size.csv |  | 4 | Panel A
 buildGif.py | gif_figures |  | movie1 |
+makeFinalFlowGif.py | localWaterYear | gif_figures |  |
 plotExampleHydrographs.py | universallyAligned_powersTranspose.csv |  | S1 | Panels b and d
+getExampleStreams2.py | FullDatabase.csv |  | S1 | Panels a and c
+getExampleStreams2.py | localWaterYear |  |  |
 compileLoss.py | ml_exampleXslope_encodings_loss_.csv |  | S2 |
 compressTemporalPatternsSlopeExample.py | ml_all_years_data_separate.csv | ml_exampleXslope_encodings_loss_.csv | S3 |
 example_spectral_properties_hydrographs.py | alldata.csv |  | S4 | All frames
@@ -116,8 +121,3 @@ combineThroughTime.py | specificDischargeThroughTime.csv | throughTimeCombined.c
 dimensionalityCompression.py | universallyAligned_powers.csv | ml_encodings1.csv |  |
 WaveletAnalysisGlobal.R | universallyAlignedGlobalFlow_DailyQ2_column.csv | universallyAligned_powers.csv |  |
 WaveletAnalysisGlobal.R | universallyAlignedGlobalFlow_DailyQ2_column.csv | universallyAligned_powersTranspose.csv |  |
-getExampleStreams2.py | FullDatabase.csv |  |  | Panels a and c
-getExampleStreams2.py | localWaterYear |  |  |
-getExampleStream.py | localWaterYear |  |  |
-getExampleStream.py | localWaterYearSpectralDecomposition |  |  |
-makeFinalFlowGif.py | localWaterYear | gif_figures |  |
