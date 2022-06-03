@@ -15,7 +15,7 @@ The Python code was executed using version 3.7.1. To run the code, you will need
 - matplotlib 3.3.4
 - seaborn 0.11.1
 - pytorch 1.3.1
-- tqdm 4.59.0
+- tqdm 4.5.0
 
 In addition, the code uses the following native libraries:
 - math
