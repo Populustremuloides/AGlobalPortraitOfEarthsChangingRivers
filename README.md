@@ -55,9 +55,6 @@ ml_masd_map.py | specific_discharge_vs_size.csv |  | 4 | Panel B
 ml_visualizele_masd_through_time2.py | specific_discharge_vs_size.csv |  | 4 | Panel A
 buildGif.py | gif_figures |  | movie1 |
 makeFinalFlowGif.py | localWaterYear | gif_figures |  |
-plotExampleHydrographs.py | universallyAligned_powersTranspose.csv |  | S1 | Panels b and d
-getExampleStreams2.py | FullDatabase.csv |  | S1 | Panels a and c
-getExampleStreams2.py | localWaterYear |  |  |
 compileLoss.py | ml_exampleXslope_encodings_loss_.csv |  | S2 |
 compressTemporalPatternsSlopeExample.py | ml_all_years_data_separate.csv | ml_exampleXslope_encodings_loss_.csv | S3 |
 example_spectral_properties_hydrographs.py | alldata.csv |  | S4 | All frames
