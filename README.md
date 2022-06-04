@@ -57,11 +57,11 @@ buildGif.py | gif_figures |  | movie1 |
 makeFinalFlowGif.py | localWaterYear | gif_figures |  |
 compileLoss.py | ml_exampleXslope_encodings_loss_.csv |  | S1 |
 compressTemporalPatternsSlopeExample.py | ml_all_years_data_separate.csv | ml_exampleXslope_encodings_loss_.csv | S2 |
-example_spectral_properties_hydrographs.py | alldata.csv |  | S4 | All frames
+example_spectral_properties_hydrographs.py | alldata.csv |  | S3 | All frames
+threeDPlot.py | ml_encodings_1.csv |  | S4 | All frames
 threeDPlot.py | ml_encodings_1.csv |  | S5 | All frames
-threeDPlot.py | ml_encodings_1.csv |  | S6 | All frames
+structureBetweenVariables.py | throughTimeCombined.csv |  | S6 | All frames
 structureBetweenVariables.py | throughTimeCombined.csv |  | S7 | All frames
-structureBetweenVariables.py | throughTimeCombined.csv |  | S8 | All frames
 plotDayOfMeanFlowThroughTimeTogether.py | dayOfMeanFlowThroughTime.csv |  | S9 | "Panels D, E, and F"
 plotSpecificDischargeThroughTimeTogether.R | specificDischargeThroughTime.csv |  | S9 | "Panels A, B, and C"
 plotSpectralNumThroughTimeTogether.R | spectralNumber_acrossTime.csv |  | S9 | "Panels G, H, and I"
