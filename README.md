@@ -1,4 +1,4 @@
-# A Global Portrait Of Earths Changing Rivers
+# A Global Portrait Of Earth's Changing Rivers
 Analysis Code for the manuscript, A Global Portrait of Earth's Changing Rivers: Smaller, Warmer Catchments are Most at Risk.
 
 ## Data Availability
