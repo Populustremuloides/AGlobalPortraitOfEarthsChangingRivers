@@ -91,6 +91,7 @@ ml_visualizele_masd_through_time2_pvals.py | alldata.csv |  | S12 |
 ml_visualize_dayOfMeanFlow_through_time_map_pvalues.py | dayOfMeanFlowThroughTime.csv |  | S12 | Panels C and D
 ml_encodings_slopes_pvalues.py | ml_slope_encodings1.csv |  | S12 |
 ml_visualizele_masd_through_time2_pvals.py | specific_discharge_vs_size.csv |  | S12 | panels A and B
+plot | specific_discharge_vs_size.csv |  | S13 | All frames
 dayOfMeanFlowThroughTime.py | alldata.csv | dayOfMeanFlowThroughTime.csv |  |
 spectralThroughTime.py | alldata.csv | spectralPowersThroughTime.csv |  |
 splitIntoNonGlobalWaterYears.py | alldata.csv | localWaterYear |  |
