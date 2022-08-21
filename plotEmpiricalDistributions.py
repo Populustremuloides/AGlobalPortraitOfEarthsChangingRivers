@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-numCatchments = 5
+numCatchments = 1000
 
 distDf = pd.read_csv("distance_df.csv")
 cols = distDf.columns
@@ -52,21 +52,23 @@ plt.ylabel("count")
 plt.xlabel("kilometers")
 plt.legend()
 plt.show()
-quit()
+#quit()
 
-df1 = pd.read_csv("dayOfMeanFlow_slopes_empiricalDistribution.csv", index_col=None)
-df2 = pd.read_csv("masd_slopes_empiricalDistribution.csv", index_col=None)
-df3 = pd.read_csv("spectral_slopes_empiricalDistribution.csv", index_col=None)
-df4 = pd.read_csv("spectral_slopes_empiricalDistributionSign.csv", index_col=None)
-
+df1 = pd.read_csv("dayOfMeanFlow_slopes_empiricalDistribution1000.csv", index_col=None)
+df2 = pd.read_csv("masd_slopes_empiricalDistribution1000.csv", index_col=None)
+df3 = pd.read_csv("spectral_slopes_empiricalDistribution1000.csv", index_col=None)
+#df4 = pd.read_csv("spectral_slopes_empiricalDistributionSign.csv", index_col=None)
 
 
 def plotDf(df, title):
+    df = df.iloc[:15000]
     print(df)
     ranges = list(df["mean_range"])
     true = ranges[0]
     simulated = ranges[1:]
-    plt.hist(simulated, bins=100)
+    percentDifferent = 100 * ((np.mean(simulated) - true) / np.mean(simulated))
+    print("percent different: ", percentDifferent)
+    plt.hist(simulated, bins=3)
     plt.vlines(true, ymin=0, ymax=5000, colors="r", label="true mean range, 5 nearest catchments")
     plt.ylim(0,600)
     plt.title(title)
@@ -78,4 +80,4 @@ def plotDf(df, title):
 plotDf(df1, "Change in Day of Mean Flow")
 plotDf(df2, "Change in Mean Annual Specific Discharge")
 plotDf(df3, "Change in Spectral Number")
-plotDf(df4, "Absolute Value of Change in Spectral Number")
+#plotDf(df4, "Absolute Value of Change in Spectral Number")
