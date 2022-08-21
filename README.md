@@ -16,6 +16,7 @@ The Python code was executed using version 3.7.1. To run the code, you will need
 - seaborn 0.11.1
 - pytorch 1.3.1
 - tqdm 4.5.0
+- sklearn 0.24.1
 
 In addition, the code uses the following native libraries:
 - math
