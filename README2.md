@@ -37,7 +37,7 @@ getExampleStream.py | FullDatabase.csv |  | 1 | all panels
 getExampleStream.py | localWaterYear |  |  |
 getExampleStream.py | localWaterYearSpectralDecomposition |  |  |
 abstractClusters.py | mergedData.csv |  | 2 | all panels
-plotChanges.py | mergedData.csv | | 2 | all panels
+plotChanges.py | mergedData.csv | | 3 | all panels
 getDistanceDf.csv | alldata.csv | distance_df.csv | | 
 empiricalDistributionTiming.py | alldata.csv | dayOfMeanFlow_slopes_empiricalDistribution.csv | | 
 empiricalDistributionTiming.py | dayOfMeanFlowThroughTime.csv | | | 
