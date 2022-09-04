@@ -1,5 +1,6 @@
 # A Global Portrait Of Earth's Changing Rivers
-Analysis Code for the manuscript, A Global Portrait of Earth's Changing Rivers: Smaller, Warmer Catchments are Most at Risk.
+Analysis Code for the manuscript, Global river flow shows dramatic shifts since 1990’s, especially in dry, warm catchments.
+
 
 ## Data Availability
 
