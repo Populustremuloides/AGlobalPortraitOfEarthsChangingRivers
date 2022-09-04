@@ -36,63 +36,10 @@ code file | input file | output file | figure produced (if any) | Notes
 getExampleStream.py | FullDatabase.csv |  | 1 | all panels
 getExampleStream.py | localWaterYear |  |  |
 getExampleStream.py | localWaterYearSpectralDecomposition |  |  |
-threeDPlot.py | day_of_mean_flow_vs_size.csv |  | 2 | All frames
-threeDPlot.py | ml_slope_encodings1.csv |  | 2 |
-threeDPlot.py | specific_discharge_vs_size.csv |  | 2 |
-ml_encodings_means.py | alldata.csv |  | 3 |
-ml_visualize_dayOfMeanFlow_mean_map.py | alldata.csv |  | 3 |
-ml_visualize_dayOfMeanFlow_mean_map.py | dayOfMeanFlowThroughTime.csv |  | 3 | Panel B
-ml_encodings_means.py | ml_slope_encodings1.csv |  | 3 | Panel C
-ml_masd_map.py | specific_discharge_vs_size.csv |  | 3 | Panel A
-structureBetweenVariables.py | throughTimeCombined.csv |  | 4 | All frames
-plotDayOfMeanFlowThroughTimeTogether.py | dayOfMeanFlowThroughTime.csv |  | 5 | Panel B
-plotSpecificDischargeThroughTimeTogether.R | specificDischargeThroughTime.csv |  | 5 | Panel A
-plotSpectralNumThroughTimeTogether.R | spectralNumber_acrossTime.csv |  | 5 | Panel C
-ml_encodings_means.py | alldata.csv |  | 6 |
-ml_encodings_slopes.py  | alldata.csv |  | 6 |
-ml_visualize_dayOfMeanFlow_mean_map.py | alldata.csv |  | 6 |
-ml_visualize_dayOfMeanFlow_throgh_time_map.py | alldata.csv |  | 6 |
-ml_visualizele_masd_through_time2.py | alldata.csv |  | 6 |
-ml_visualize_dayOfMeanFlow_mean_map.py | dayOfMeanFlowThroughTime.csv |  | 6 | Panel D
-ml_visualize_dayOfMeanFlow_throgh_time_map.py | dayOfMeanFlowThroughTime.csv |  | 6 | Panel C
-ml_encodings_means.py | ml_slope_encodings1.csv |  | 6 | Panel F
-ml_encodings_slopes.py  | ml_slope_encodings1.csv |  | 6 | Panel E
-ml_masd_map.py | specific_discharge_vs_size.csv |  | 6 | Panel B
-ml_visualizele_masd_through_time2.py | specific_discharge_vs_size.csv |  | 6 | Panel A
-buildGif.py | gif_figures |  | movie1 |
-makeFinalFlowGif.py | localWaterYear | gif_figures |  |
-compileLoss.py | ml_exampleXslope_encodings_loss_.csv |  | S1 |
-compressTemporalPatternsSlopeExample.py | ml_all_years_data_separate.csv | ml_exampleXslope_encodings_loss_.csv | S2 |
-example_spectral_properties_hydrographs.py | alldata.csv |  | S3 | All frames
-threeDPlot.py | ml_encodings_1.csv |  | S4 | All frames
-threeDPlot.py | ml_encodings_1.csv |  | S5 | All frames
-plotDayOfMeanFlow.R | day_of_mean_flow_vs_size.csv |  | S6 | Panel B
-plotSpecificDischarge.R  | specific_discharge_vs_size.csv |  | S6 | Panel A
-ml_encodings_means_temp.py | alldata.csv |  | S7 | Panel C
-ml_encodings_slopes_temp.py | alldata.csv |  | S7 | Panel F
-ml_masd_map.py | alldata.csv |  | S7 |
-ml_visualize_dayOfMeanFlow_through_time2.py | alldata.csv |  | S7 |
-ml_visualize_dayOfMeanFlow_through_time2.py | dayOfMeanFlowThroughTime.csv |  | S7 | Panel E
-ml_encodings_slopes_temp.py | ml_slope_encodings1.csv |  | S7 |
-ml_masd_map.py | specific_discharge_vs_size.csv |  | S7 | Panel A
-ml_visualize_dayOfMeanFlow_mean_map.py | dayOfMeanFlowThroughTime.csv |  | S7 | Panel B
-slopeThroughTime.py | specific_discharge_vs_size.csv |  | S7 | Panel D
-plotDayOfMeanFlowThroughTimeTogether.py | dayOfMeanFlowThroughTime.csv |  | S8 | "Panels D, E, and F"
-plotSpecificDischargeThroughTimeTogether.R | specificDischargeThroughTime.csv |  | S8 | "Panels A, B, and C"
-plotSpectralNumThroughTimeTogether.R | spectralNumber_acrossTime.csv |  | S8 | "Panels G, H, and I"
-plotSpectralThroughTime.R | spectralPowersThroughTime.csv |  | S9 |
-structureBetweenVariables.py | throughTimeCombined.csv |  | S10 | All frames
-structureBetweenVariables.py | throughTimeCombined.csv |  | S11 | All frames
-ml_encodings_slopes_pvalues.py | alldata.csv |  | S12 | Panels E and F
-ml_visualize_dayOfMeanFlow_through_time_map_pvalues.py | alldata.csv |  | S12 |
-ml_visualizele_masd_through_time2_pvals.py | alldata.csv |  | S12 |
-ml_visualize_dayOfMeanFlow_through_time_map_pvalues.py | dayOfMeanFlowThroughTime.csv |  | S12 | Panels C and D
-ml_encodings_slopes_pvalues.py | ml_slope_encodings1.csv |  | S12 |
-ml_visualizele_masd_through_time2_pvals.py | specific_discharge_vs_size.csv |  | S12 | panels A and B
-plotEmpiricalDistributions | dayOfMeanFlow_slopes_empiricalDistribution.csv |  | S13 | All frames
-plotEmpiricalDistributions | masd_slopes_empiricalDistribution.csv |  | S13 | All frames
-plotEmpiricalDistributions | spectral_slopes_empiricalDistribution.csv |  | S13 | All frames
-plotEmpiricalDistributions | distance_df.csv |  | S13 | All frames
+ |  |  |  |
+
+
+
 getDistanceDf.csv | alldata.csv | distance_df.csv | | 
 empiricalDistributionTiming.py | alldata.csv | dayOfMeanFlow_slopes_empiricalDistribution.csv | | 
 empiricalDistributionTiming.py | dayOfMeanFlowThroughTime.csv | | | 
@@ -103,9 +50,6 @@ empiricalDistributionVariability.py | ml_slope_encodings1.csv |  | |
 dayOfMeanFlowThroughTime.py | alldata.csv | dayOfMeanFlowThroughTime.csv |  |
 spectralThroughTime.py | alldata.csv | spectralPowersThroughTime.csv |  |
 splitIntoNonGlobalWaterYears.py | alldata.csv | localWaterYear |  |
-structureBetweenVariables.py | alldata_hemisphereCorrected.csv |  |  |
-structureBetweenVariables.py | alldata_hemisphereCorrected.csv |  |  |
-structureBetweenVariables.py | alldata_hemisphereCorrected.csv |  |  |
 plotSpectralNumberThroughTime.py | day_of_mean_flow_vs_size.csv | spectralNumber_acrossTime.csv |  |
 combineThroughTime.py | dayOfMeanFlowThroughTime.csv | throughTimeCombined.csv |  |
 testDifferenceInDayOfMeanFlow.py | FullDatabase.csv | day_of_mean_flow_vs_size.csv |  |
