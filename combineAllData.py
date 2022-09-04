@@ -18,8 +18,6 @@ import matplotlib.cm as cm
 import matplotlib as mpl
 import numpy as np
 from scipy import stats
-from sklearn.gaussian_process import GaussianProcessRegressor
-from sklearn.gaussian_process.kernels import RBF
 from scipy.stats.mstats import theilslopes as ts
 
 numSplits = 3
@@ -154,34 +152,6 @@ df = masddf.merge(df, on="catchment")
 # domf
 domfdf = pd.DataFrame.from_dict(domfDict)
 df = domfdf.merge(df, on="catchment")
-
-
-kernel = RBF(1.)
-noise_std=0.75
-gaussian_process = GaussianProcessRegressor(kernel=kernel, alpha=noise_std**2, n_restarts_optimizer=9)
-gords = np.expand_dims(np.asarray(df["gord"]), axis=1)
-prec = np.asarray(df["MeanPrecAnn"])
-gaussian_process.fit(gords, prec)
-
-x = np.expand_dims(np.arange(1,12), axis=1)
-meanPrediction, stdPrediction = gaussian_process.predict(x, return_std=True)
-
-x = np.squeeze(x)
-x = list(x)
-meanPrediciton = list(meanPrediction)
-meanPrediction = list(meanPrediction)
-gordToVal = dict(zip(x, meanPrediction))
-
-# remove the plotPredictorsled value for 
-newPrecips = []
-for i in range(np.max(gords.shape)):
-    gord = gords[i][0]
-    newPrecip = prec[i] - gordToVal[gord]
-    newPrecips.append(newPrecip)
-
-df["MeanPrecAnnDetrended"] = newPrecips
-
-
 
 df.to_csv("mergedData.csv", index=False)
 print(df)
