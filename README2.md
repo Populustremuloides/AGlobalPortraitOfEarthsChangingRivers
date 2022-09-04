@@ -39,6 +39,25 @@ getExampleStream.py | localWaterYearSpectralDecomposition |  |  |
 abstractClusters.py | mergedData.csv |  | 2 | all panels
 plotChanges.py | mergedData.csv | | 3 | all panels
 mapAll.py | mergedData.csv | | 4 | all panels
+lassoRegressionHeatMaps.py | mergedData.csv | | 5 | all panels
+plotColdLikeHot.py | mergedData.csv | | 6 | all panels
+colorCatchments.py | | | | 
+buildGif.py | gif_figures |  | movie1 |
+makeFinalFlowGif.py | localWaterYear | gif_figures |  |
+compileLoss.py | ml_exampleXslope_encodings_loss_.csv |  | S1 |
+compressTemporalPatternsSlopeExample.py | ml_all_years_data_separate.csv | ml_exampleXslope_encodings_loss_.csv | S2 |
+example_spectral_properties_hydrographs.py | alldata.csv |  | S3 | All frames
+mapAll | mergedData.csv | | S4 | frames A and B
+plotRelationships.py | mergedData.csv | | S4 | frame C
+autocorrelation.py | mergedData.csv | | S5 | all frames
+plotChanges.py | mergedData.csv | | S6 | all frames
+mapAll | mergedData.csv | | S7 | all frames
+spatialSimilarityFigure.py | slopes_empiricalDistributions.csv | | S8 | all frames
+spatialSimilarity.py | distancces.csv | slopes_empiricalDistributions.csv | |
+spatialSimilarity.py | mergedData.csv | | |
+plotRelationships.py | mergedData.csv | | S9 |
+lassoRegressionHeatmaps.py | mergedData.csv | | S10 |
+plotRelationships.py | mergedData.csv | | S11-S16 | all figures/panels
 getDistanceDf.csv | alldata.csv | distance_df.csv | | 
 empiricalDistributionTiming.py | alldata.csv | dayOfMeanFlow_slopes_empiricalDistribution.csv | | 
 empiricalDistributionTiming.py | dayOfMeanFlowThroughTime.csv | | | 
