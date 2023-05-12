@@ -104,15 +104,15 @@ def _printTruncation(var, lowerBound, upperBound, transform=None):
 # *********************************************************************************
 # log mean annual precipitation detrended
 # *********************************************************************************
-minPrecAnnDetrendedVal = np.min(df["MeanPrecAnnDetrended"])
+#minPrecAnnDetrendedVal = np.min(df["MeanPrecAnnDetrended"])
 
-def transform_MeanPrecAnnDetrendedLog(array):
-    array = np.asarray(array)
-    posArray = array + 1.1 - minPrecAnnDetrendedVal
-    result = np.log(posArray)
-    return result
+#def transform_MeanPrecAnnDetrendedLog(array):
+#    array = np.asarray(array)
+#    posArray = array + 1.1 - minPrecAnnDetrendedVal
+#    result = np.log(posArray)
+#    return result
 
-transformedVals = transform_MeanPrecAnnDetrendedLog(df["MeanPrecAnnDetrended"]) # calculate once for speed later on
+#transformedVals = transform_MeanPrecAnnDetrendedLog(df["MeanPrecAnnDetrended"]) # calculate once for speed later on
 #plt.hist(transformedVals)
 #plt.show()
 
@@ -130,7 +130,7 @@ def getM_MeanPrecAnnDetrendedLog(cmap):
     norm = getNorm_MeanPrecAnnDetrendedLog()
     m = cm.ScalarMappable(norm=norm, cmap=cmap)
     return m
-
+'''
 def colorbar_MeanPrecAnnDetrendedLog(cmap, save=False, saveDir=None, pLeft=False):
     fig, ax = plt.subplots(figsize=(3, 10))
 
@@ -154,7 +154,7 @@ def colorbar_MeanPrecAnnDetrendedLog(cmap, save=False, saveDir=None, pLeft=False
         else:
             plt.savefig(os.path.join(saveDir,"colorbar_MeanPrecAnnDetrendedLog.png"))
     plt.show()
-
+'''
 # *********************************************************************************
 # log mean annual precipitation
 # *********************************************************************************

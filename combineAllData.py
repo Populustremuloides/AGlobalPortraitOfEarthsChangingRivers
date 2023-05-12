@@ -22,7 +22,7 @@ from scipy.stats.mstats import theilslopes as ts
 
 numSplits = 3
 
-adf = pd.read_csv("alldata.csv")
+adf = pd.read_csv("alldata.csv", encoding="latin-1")
 cats = []
 for cat in adf["grdc_no"]:
     try:
@@ -156,4 +156,3 @@ df = domfdf.merge(df, on="catchment")
 df.to_csv("mergedData.csv", index=False)
 print(df)
 quit()
-

@@ -29,7 +29,8 @@ varToTitle = {
         "gord":"stream order"
         }
 
-root = "/home/sethbw/Documents/GlobFlow/spectralAnalysis/"
+#root = "/home/sethbw/Documents/GlobFlow/spectralAnalysis/"
+root = os.getcwd()
 resultsDir = os.path.join(root, "ClusteringResults")
 
 minNumClusters = 2
@@ -64,6 +65,7 @@ X = scaler.transform(X)
 
 numRepeats = 20
 maxClusters = 10
+
 '''
 nClusters = list(range(minNumClusters,maxClusters))
 scores = np.zeros((numRepeats, len(nClusters)))
@@ -91,9 +93,10 @@ plt.title("Optimal # of Clusters for Global Streamflow Data")
 plt.savefig(os.path.join(resultsDir,"abstract_numClusters.png"))
 plt.show()
 '''
+
 # generate the map plot
 
-nClusters = nClusters[np.argsort(meanScores)[-1]] 
+nClusters = 5 #nClusters[np.argsort(meanScores)[-1]] 
 
 model = KMeans(n_clusters=nClusters).fit(X)
 realLabels = model.labels_
@@ -106,7 +109,7 @@ realScore = ss(X, realLabels, metric="euclidean")
 fig = plt.figure(figsize=(11 * 2,6 * 2))
 
 ax = fig.add_subplot(1,1,1, projection=ccrs.PlateCarree())
-ax.set_extent([-180,180,-90,90], crs=ccrs.PlateCarree())
+ax.set_extent([-180,180,-70,83], crs=ccrs.PlateCarree())
 ax.add_feature(cfeature.COASTLINE)
 
 labelTypes = list(set(realLabels))
@@ -117,16 +120,25 @@ for labelType in labelTypes:
     lys = ys[mask]
     ax.scatter(lxs, lys, s=4, alpha=0.75, label=str(labelType + 1))
 
-plt.legend(title="cluster #")
-plt.title("Clusters Generated Using 3 Flow Metrics", fontsize=30)
+lgnd = plt.legend(title="cluster #", prop={"size":20}, title_fontsize=15)
+lgnd.legendHandles[0]._sizes = [50]
+lgnd.legendHandles[1]._sizes = [50]
+lgnd.legendHandles[2]._sizes = [50]
+lgnd.legendHandles[3]._sizes = [50]
+lgnd.legendHandles[4]._sizes = [50]
+plt.title("Clusters Generated Using Timing, Magnitude, and Variability of Flow", fontsize=30)
 plt.savefig(os.path.join(resultsDir, "abstract_map.png"))
 plt.show()
 
 
 fig, ax1 = plt.subplots()
 
-cluster_labels = model.fit_predict(X)
+cluster_labels = model.predict(X)
 sample_silhouette_values = silhouette_samples(X, cluster_labels)
+
+
+prop_cycle = plt.rcParams['axes.prop_cycle']
+colors = prop_cycle.by_key()['color']
 
 y_lower = 10
 for i in range(nClusters):
@@ -144,14 +156,17 @@ for i in range(nClusters):
         np.arange(y_lower, y_upper),
         0,
         ith_cluster_silhouette_values,
-        #facecolor=color,
-        #edgecolor=color,
+        facecolor=colors[i],
+        edgecolor=colors[i],
+ 
+#        facecolor=colors[4 - i],
+#        edgecolor=colors[4 - i],
         alpha=0.7,
     )
 
     # Label the silhouette plots with their cluster numbers at the middle
-    ax1.text(-0.05, y_lower + 0.5 * size_cluster_i, str(nClusters[np.argsort(meanScores)[-1]] - i))
-
+    ax1.text(-0.05, y_lower + 0.5 * size_cluster_i, str(nClusters - i))
+    #ax1.text(-0.05, y_lower + 0.5 * size_cluster_i, 1 + i)#str(nClusters[np.argsort(meanScores)[-1]] - i))
     # Compute the new y_lower for next plot
     y_lower = y_upper + 10  # 10 for the 0 samples
 
